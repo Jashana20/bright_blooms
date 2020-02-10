@@ -1,0 +1,34 @@
+Login/create new users
+
+- set public/ private profiles and/or gardens
+
+CRUD:
+
+CREATE:
+
+- user profile: public/private
+- user garden(s): public/private
+- growing session - a plant within a garden
+
+
+READ:
+
+- See all the user's plants
+- See all the plants in a user's garden
+- Search by plant name to see the optimal conditions required to grow
+- See all the possible growing conditions (so the user sees the things needed to consider before growing)
+- most popular plant
+- see user's growing history
+- OPTIONAL: difficulty aspect
+
+UPDATE:
+
+- update plant status/ number of plants in a garden by creating a growing session
+- update user profile (bio, country, password, expertise)
+
+DELETE:
+
+- delete a growing session if plant dies
+- delete profile
+- delete a garden (optional)
+

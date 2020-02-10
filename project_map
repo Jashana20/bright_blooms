@@ -1,0 +1,76 @@
+User can lookup a set of growing instructions for a specific plant
+
+Create a virtual garden which contains all of their previous and currently growing plants
+
+CRUD:
+
+Create:
+-create a User
+-create garden
+-create a growing session
+
+Read: 
+-retrive growth instructions for a specific plant
+-retrieve the current state of the garden
+-retrieve the growing history
+
+Update:
+-update the growing log 
+-update user information, geographic if the user moves
+-edit bio
+
+Delete:
+-remove a User
+-remove a plant from a garden
+
+
+
+==============================================
+Users_table
+-  username
+-  password
+-  email
+-  bio
+-  country
+
+Plants_table
+-  name
+-  family(dropdown list)
+-  origin(country)
+-  environment(dropdown list)
+
+Conditions_table
+-   sunlight exposure(hours per day)
+-   sunlight exposure type(direct, indirect)
+-   watering interval
+-   water volume per week
+-   soil type(chalky, clay, loamy, peaty, sandy and silty)
+
+Gardens_table
+
+- name
+- user_id
+- plant_id
+
+Instructions_table
+
+-plant_id
+-condition_id
+
+==============================================
+Welcome page directs users to an introduction about growing(can have a cookie so only new users see this)
+
+Login/create new uers
+
+
+
+Basic crud features listed above,
+
+See all the user's plants
+See all the plants in a user's garden
+Search by plant name to see the optimal conditions required to grow
+
+See all the possible growing conditions (so the user sees the things needed to consider before growing)
+
+most popular plant
+difficulty aspect

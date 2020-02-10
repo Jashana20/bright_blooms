@@ -105,3 +105,74 @@ Migrating to CreateInstructions (5)
   [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-02-10 12:32:15 +0000
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/wojciech/.rvm/gems/ruby-2.6.1/ruby/2.6.0/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/wojciech/.rvm/gems/ruby-2.6.1/ruby/2.6.0/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 26.8ms | Allocations: 482)
+Completed 200 OK in 78ms (Views: 32.9ms | ActiveRecord: 0.0ms | Allocations: 2753)
+
+
+Started GET "/users/new" for ::1 at 2020-02-10 12:32:34 +0000
+  
+SyntaxError (/home/wojciech/development/module 2/mod2project/bright_blooms1/app/controllers/users_controller.rb:2: syntax error, unexpected [, expecting do or '{' or '('
+...before_action :set_user, only [:show, :edit, :update, :destr...
+...                              ^):
+  
+app/controllers/users_controller.rb:2: syntax error, unexpected [, expecting do or '{' or '('
+app/controllers/users_controller.rb:2: syntax error, unexpected [, expecting do or '{' or '('
+app/controllers/users_controller.rb:2: syntax error, unexpected [, expecting do or '{' or '('
+Started GET "/users/new" for ::1 at 2020-02-10 12:33:12 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2152)
+
+
+  
+NameError (uninitialized constant UsersController::User):
+  
+app/controllers/users_controller.rb:9:in `new'
+Started GET "/users/new" for ::1 at 2020-02-10 12:34:37 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 97.5ms | Allocations: 4674)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+[DEPRECATION] The trollop gem has been renamed to optimist and will no longer be supported. Please switch to optimist as soon as possible.
+/home/wojciech/.rvm/gems/ruby-2.6.1/ruby/2.6.0/gems/yarn-0.1.1/lib/yarn/server.rb:58:in `initialize': Address already in use - bind(2) for "127.0.0.1" port 3000 (Errno::EADDRINUSE)
+	from /home/wojciech/.rvm/gems/ruby-2.6.1/ruby/2.6.0/gems/yarn-0.1.1/lib/yarn/server.rb:58:in `new'
+	from /home/wojciech/.rvm/gems/ruby-2.6.1/ruby/2.6.0/gems/yarn-0.1.1/lib/yarn/server.rb:58:in `start'
+	from /home/wojciech/.rvm/gems/ruby-2.6.1/ruby/2.6.0/gems/yarn-0.1.1/bin/yarn:27:in `<top (required)>'
+	from /home/wojciech/.rvm/gems/ruby-2.6.1/ruby/2.6.0/bin/yarn:23:in `load'
+	from /home/wojciech/.rvm/gems/ruby-2.6.1/ruby/2.6.0/bin/yarn:23:in `<main>'
+	from /home/wojciech/.rvm/gems/ruby-2.6.1/ruby/2.6.0/bin/ruby_executable_hooks:24:in `eval'
+	from /home/wojciech/.rvm/gems/ruby-2.6.1/ruby/2.6.0/bin/ruby_executable_hooks:24:in `<main>'
+[DEPRECATION] The trollop gem has been renamed to optimist and will no longer be supported. Please switch to optimist as soon as possible.
+Error: unknown argument '--config'.
+Try --help for help.
+
+Completed 500 Internal Server Error in 1789ms (ActiveRecord: 1.6ms | Allocations: 27611)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/wojciech/development/module 2/mod2project/bright_blooms1/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
