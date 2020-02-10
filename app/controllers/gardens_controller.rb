@@ -10,7 +10,7 @@ class GardensController < ApplicationController
     end
 
     def create 
-        @garden = Garden.create(garden_params(:name, :user_id, :plant_id))
+        @garden = Garden.create(garden_params(:name, :catgeory, :user_id, :plant_id))
         redirect_to garden_path(@garden)
     end
 
@@ -21,7 +21,7 @@ class GardensController < ApplicationController
     end
 
     def update
-        @garden.update(garden_params(:name, :user_id, :plant_id))
+        @garden.update(garden_params(:name, :category, :user_id, :plant_id))
         redirect_to garden_path(@garden)
     end
 

@@ -1,11 +1,14 @@
-class CreatePlants < ActiveRecord::Migration
+class CreatePlants < ActiveRecord::Migration[6.0]
 
     def change 
         create_table :plants do |t|
-           t.string :name
-           t.string :plant_family
-           t.string :origin
-           t.string :environment
+           t.string :tfvname
+           t.string :botname
+           t.string :othname
+           t.string :image_url
+           t.string :description
+           t.string :uses
+           t.string :health
         end
     end
     

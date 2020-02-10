@@ -1,4 +1,4 @@
-class CreateInstructions < ActiveRecord::Migration
+class CreateInstructions < ActiveRecord::Migration[6.0]
 
     def change 
         create_table :instructions do |t|

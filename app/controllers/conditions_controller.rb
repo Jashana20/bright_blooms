@@ -10,7 +10,7 @@ class ConditionsController < ApplicationController
     end
 
     def create 
-        @condition = Condition.create(condition_params(:sunlight_exposure, :sunlight_exposure_type, :watering_interval, :weekly_water_volume, :soil_type))
+        @condition = Condition.create(condition_params(:climate, :soil, :propogation))
         redirect_to condition_path(@condition)
     end
 
@@ -21,7 +21,7 @@ class ConditionsController < ApplicationController
     end
 
     def update
-        @condition.update(condition_params(:sunlight_exposure, :sunlight_exposure_type, :watering_interval, :weekly_water_volume, :soil_type))
+        @condition.update(condition_params(:climate, :soil, :propogation))
         redirect_to condition_path(@condition)
     end
 

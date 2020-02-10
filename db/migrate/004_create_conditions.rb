@@ -1,12 +1,10 @@
-class CreateConditions < ActiveRecord::Migration
+class CreateConditions < ActiveRecord::Migration[6.0]
 
     def change 
         create_table :conditions do |t|
-           t.integer :sunlight_exposure
-           t.string :sunlight_exposure_type
-           t.string :watering_interval
-           t.integer :weekly_water_volume
-           t.string :soil_type
+            t.string :climate
+            t.string :soil
+            t.string :propogation
        end
     end
     

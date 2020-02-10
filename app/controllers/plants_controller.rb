@@ -10,7 +10,7 @@ class PlantsController < ApplicationController
     end
 
     def create 
-        @plant = Plant.create(plant_params(:name, :plant_family, :origin, :environment))
+        @plant = Plant.create(plant_params(:tfvmname, :botname, :othname, :image_url, :description, :uses, :health))
         redirect_to plant_path(@plant)
     end
 
@@ -21,7 +21,7 @@ class PlantsController < ApplicationController
     end
 
     def update
-        @plant.update(plant_params(:name, :plant_family, :origin, :environment))
+        @plant.update(plant_params(:tfvmname, :botname, :othname, :image_url, :description, :uses, :health))
         redirect_to plant_path(@plant)
     end
 
