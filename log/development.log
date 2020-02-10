@@ -2184,3 +2184,567 @@ Processing by PlantsController#index as HTML
 Completed 200 OK in 255ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 6093)
 
 
+Started GET "/plants" for ::1 at 2020-02-10 16:00:56 +0000
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 257)
+Completed 200 OK in 328ms (Views: 49.9ms | ActiveRecord: 0.0ms | Allocations: 8615)
+
+
+Started GET "/plants" for ::1 at 2020-02-10 16:01:06 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 137)
+Completed 200 OK in 236ms (Views: 13.3ms | ActiveRecord: 0.0ms | Allocations: 5196)
+
+
+Started GET "/plants" for ::1 at 2020-02-10 16:01:15 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 137)
+Completed 200 OK in 245ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 5202)
+
+
+Started GET "/plants" for ::1 at 2020-02-10 16:01:35 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 130)
+Completed 200 OK in 2905ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 5208)
+
+
+Started GET "/plants" for ::1 at 2020-02-10 16:01:44 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 135)
+Completed 200 OK in 243ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 5198)
+
+
+Started GET "/plants" for ::1 at 2020-02-10 16:05:01 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 16)
+Completed 200 OK in 280ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 4196)
+
+
+Started GET "/plants" for ::1 at 2020-02-10 16:06:41 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 138)
+Completed 200 OK in 773ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 5197)
+
+
+Started GET "/plants" for ::1 at 2020-02-10 16:07:08 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 129)
+Completed 200 OK in 1250ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 5191)
+
+
+Started GET "/plants" for ::1 at 2020-02-10 16:07:21 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 128)
+Completed 200 OK in 1381ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 5178)
+
+
+Started GET "/plants" for ::1 at 2020-02-10 16:07:29 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 9.3ms | Allocations: 3627)
+Completed 500 Internal Server Error in 240ms (ActiveRecord: 0.0ms | Allocations: 7110)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    1: <% @plants.each_with_index do |plant,index| %>
+    2:     <%= plant[7][index]%>
+    3: <% end %>
+  
+app/views/plants/index.html.erb:2
+app/views/plants/index.html.erb:1:in `each'
+app/views/plants/index.html.erb:1:in `each_with_index'
+app/views/plants/index.html.erb:1
+Started GET "/plants" for ::1 at 2020-02-10 16:07:38 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 128)
+Completed 200 OK in 2656ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 5257)
+
+
+Started GET "/plants" for ::1 at 2020-02-10 16:07:49 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 137)
+Completed 200 OK in 1975ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 5198)
+
+
+Started GET "/plants" for ::1 at 2020-02-10 16:08:05 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1037)
+Completed 200 OK in 244ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 6098)
+
+
+Started GET "/plants" for ::1 at 2020-02-10 16:08:54 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 999)
+Completed 500 Internal Server Error in 1258ms (ActiveRecord: 0.0ms | Allocations: 4482)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1..2)):
+    1: <% @plants.each_with_index do |plant,index| %>
+    2:     <%= plant[]["tfvname"]%>
+    3: <% end %>
+  
+app/views/plants/index.html.erb:2:in `[]'
+app/views/plants/index.html.erb:2
+app/views/plants/index.html.erb:1:in `each'
+app/views/plants/index.html.erb:1:in `each_with_index'
+app/views/plants/index.html.erb:1
+Started GET "/plants" for ::1 at 2020-02-10 16:09:09 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 130)
+Completed 200 OK in 262ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 5204)
+
+
+Started GET "/plants" for ::1 at 2020-02-10 16:09:30 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 138)
+Completed 200 OK in 218ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 5192)
+
+
+Started GET "/plants" for ::1 at 2020-02-10 16:09:48 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 130)
+Completed 200 OK in 285ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 5191)
+
+
+Started GET "/plants" for ::1 at 2020-02-10 16:11:55 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1018)
+Completed 500 Internal Server Error in 273ms (ActiveRecord: 0.0ms | Allocations: 4498)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% @plants.each_with_index do |plant,index| %>
+    <%= plant[index]["tfvname"] puts "HAHAHAHAH"%>
+<% end %>
+):
+1:    <% @plants.each_with_index do |plant,index| %>
+2:        <%= plant[index]["tfvname"] puts "HAHAHAHAH"%>
+3:    <% end %>
+  
+app/views/plants/index.html.erb:2: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/plants/index.html.erb:2: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/plants/index.html.erb:2: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/plants/index.html.erb:2: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/plants/index.html.erb:2: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/plants/index.html.erb:2: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/plants" for ::1 at 2020-02-10 16:12:03 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 130)
+Completed 200 OK in 234ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 5248)
+
+
+Started GET "/plants" for ::1 at 2020-02-10 16:12:58 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 130)
+Completed 200 OK in 263ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 5189)
+
+
+Started GET "/plants" for ::1 at 2020-02-10 16:13:05 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 130)
+Completed 200 OK in 388ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 5185)
+
+
+Started GET "/plants" for ::1 at 2020-02-10 16:13:18 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 130)
+Completed 200 OK in 259ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 5189)
+
+
+Started GET "/plants" for ::1 at 2020-02-10 16:13:25 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 130)
+Completed 200 OK in 1035ms (Views: 4.1ms | ActiveRecord: 0.0ms | Allocations: 5188)
+
+
+Started GET "/plants" for ::1 at 2020-02-10 16:13:36 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 130)
+Completed 200 OK in 648ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 5190)
+
+
+Started GET "/plants" for ::1 at 2020-02-10 16:13:54 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 137)
+Completed 200 OK in 378ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 5192)
+
+
+Started GET "/plants" for ::1 at 2020-02-10 16:14:04 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 136)
+Completed 200 OK in 1247ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 5200)
+
+
+Started GET "/plants" for ::1 at 2020-02-10 16:14:15 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 130)
+Completed 200 OK in 225ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 5226)
+
+
+Started GET "/plants" for ::1 at 2020-02-10 16:15:42 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1016)
+Completed 500 Internal Server Error in 219ms (ActiveRecord: 0.0ms | Allocations: 4499)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% @plants.each_with_index do |plant,index| %>
+    <%=  plant[index]."tfvname"%>
+<% end %>
+):
+1:    <% @plants.each_with_index do |plant,index| %>
+2:        <%=  plant[index]."tfvname"%>
+3:    <% end %>
+  
+app/views/plants/index.html.erb:2: syntax error, unexpected tSTRING_BEG
+app/views/plants/index.html.erb:2: syntax error, unexpected tSTRING_BEG
+app/views/plants/index.html.erb:2: syntax error, unexpected tSTRING_BEG
+app/views/plants/index.html.erb:2: syntax error, unexpected tSTRING_BEG
+app/views/plants/index.html.erb:2: syntax error, unexpected tSTRING_BEG
+app/views/plants/index.html.erb:2: syntax error, unexpected tSTRING_BEG
+Started GET "/plants" for ::1 at 2020-02-10 16:15:50 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1909)
+Completed 500 Internal Server Error in 1245ms (ActiveRecord: 0.0ms | Allocations: 5408)
+
+
+  
+ActionView::Template::Error (undefined method `tfvname' for "r":String):
+    1: <% @plants.each_with_index do |plant,index| %>
+    2:     <%=  plant[index].tfvname%>
+    3: <% end %>
+  
+app/views/plants/index.html.erb:2
+app/views/plants/index.html.erb:1:in `each'
+app/views/plants/index.html.erb:1:in `each_with_index'
+app/views/plants/index.html.erb:1
+Started GET "/plants" for ::1 at 2020-02-10 16:15:59 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 130)
+Completed 200 OK in 220ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 5208)
+
+
+Started GET "/plants" for ::1 at 2020-02-10 16:16:31 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 988)
+Completed 500 Internal Server Error in 1520ms (ActiveRecord: 0.0ms | Allocations: 4505)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    1: <% @plants.each_with_index(0) do |plant,index| %>
+    2:     <%=  plant[index]["tfvname"]%>
+    3: <% end %>
+  
+app/views/plants/index.html.erb:1:in `each'
+app/views/plants/index.html.erb:1:in `each_with_index'
+app/views/plants/index.html.erb:1
+Started GET "/plants" for ::1 at 2020-02-10 16:16:42 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 130)
+Completed 200 OK in 653ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 5199)
+
+
+Started GET "/plants" for ::1 at 2020-02-10 16:17:31 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1003)
+Completed 500 Internal Server Error in 695ms (ActiveRecord: 0.0ms | Allocations: 4484)
+
+
+  
+ActionView::Template::Error (no implicit conversion of String into Integer):
+    1: <% @plants.each_with_index do |plant,index| %>
+    2:     <%=  plant["tfvname"]%>
+    3: <% end %>
+  
+app/views/plants/index.html.erb:2:in `[]'
+app/views/plants/index.html.erb:2
+app/views/plants/index.html.erb:1:in `each'
+app/views/plants/index.html.erb:1:in `each_with_index'
+app/views/plants/index.html.erb:1
+Started GET "/plants" for ::1 at 2020-02-10 16:18:41 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2069)
+Completed 500 Internal Server Error in 1312ms (ActiveRecord: 0.0ms | Allocations: 5607)
+
+
+  
+ActionView::Template::Error (undefined method `each' for "results":String):
+    1: <% @plants.each_with_index do |plant,index| %>
+    2:     <%  plant.each do |inner_plant|%>
+    3:         <%= inner_plant["tfvname"]%>
+    4:     <% end %>
+    5: <% end %>
+  
+app/views/plants/index.html.erb:2
+app/views/plants/index.html.erb:1:in `each'
+app/views/plants/index.html.erb:1:in `each_with_index'
+app/views/plants/index.html.erb:1
+Started GET "/plants" for ::1 at 2020-02-10 16:19:08 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1941)
+Completed 500 Internal Server Error in 244ms (ActiveRecord: 0.0ms | Allocations: 5435)
+
+
+  
+ActionView::Template::Error (undefined method `shift' for "results":String):
+    1: <% @plants.each_with_index do |plant,index| %>
+    2:     <%  plant.shift.each do |inner_plant|%>
+    3:         <%= inner_plant["tfvname"]%>
+    4:     <% end %>
+    5: <% end %>
+  
+app/views/plants/index.html.erb:2
+app/views/plants/index.html.erb:1:in `each'
+app/views/plants/index.html.erb:1:in `each_with_index'
+app/views/plants/index.html.erb:1
+Started GET "/plants" for ::1 at 2020-02-10 16:19:36 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 2018)
+Completed 500 Internal Server Error in 237ms (ActiveRecord: 0.0ms | Allocations: 5511)
+
+
+  
+ActionView::Template::Error (undefined method `each_with_index' for "results":String
+Did you mean?  each_line):
+    1: <% @plants.each_with_index do |plant,index| %>
+    2:     <%  plant.each_with_index(1) do |inner_plant, index|%>
+    3:         <%= inner_plant["tfvname"]%>
+    4:     <% end %>
+    5: <% end %>
+  
+app/views/plants/index.html.erb:2
+app/views/plants/index.html.erb:1:in `each'
+app/views/plants/index.html.erb:1:in `each_with_index'
+app/views/plants/index.html.erb:1
+Started GET "/plants" for ::1 at 2020-02-10 16:20:23 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 130)
+Completed 200 OK in 314ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 5447)
+
+
+Started GET "/plants" for ::1 at 2020-02-10 16:20:31 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 440ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 4547)
+
+
+Started GET "/plants" for ::1 at 2020-02-10 16:20:41 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlantsController#index as HTML
+Completed 500 Internal Server Error in 246ms (ActiveRecord: 0.0ms | Allocations: 4844)
+
+
+  
+NoMethodError (undefined method `pop' for #<Hash:0x00007f34908e84d0>):
+  
+app/controllers/plants_controller.rb:8:in `index'
+Started GET "/plants" for ::1 at 2020-02-10 16:20:56 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1206)
+Completed 500 Internal Server Error in 269ms (ActiveRecord: 0.0ms | Allocations: 4340)
+
+
+  
+ActionView::Template::Error (undefined method `each_with_index' for nil:NilClass):
+    1: <% @plants.each_with_index do |plant,index| %>
+    2:     <%=  plant[index]["tfvname"]%>
+    3: <% end %>
+  
+app/views/plants/index.html.erb:1
+Started GET "/plants" for ::1 at 2020-02-10 16:21:10 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1365)
+Completed 500 Internal Server Error in 257ms (ActiveRecord: 0.0ms | Allocations: 4850)
+
+
+  
+ActionView::Template::Error (undefined method `each_with_index' for nil:NilClass):
+    1: <% @plants.each_with_index do |plant,index| %>
+    2:     <%=  plant%>
+    3: <% end %>
+  
+app/views/plants/index.html.erb:1
+Started GET "/plants" for ::1 at 2020-02-10 16:22:19 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1205)
+Completed 500 Internal Server Error in 280ms (ActiveRecord: 0.0ms | Allocations: 4341)
+
+
+  
+ActionView::Template::Error (undefined method `each_with_index' for nil:NilClass):
+    1: <% @plants.each_with_index do |plant,index| %>
+    2:     <%=  plant%>
+    3: <% end %>
+  
+app/views/plants/index.html.erb:1
+Started GET "/plants" for ::1 at 2020-02-10 16:22:37 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1016)
+Completed 200 OK in 648ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 5741)
+
+
+Started GET "/plants" for ::1 at 2020-02-10 16:23:01 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 228)
+Completed 200 OK in 230ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 5292)
+
+
+Started GET "/plants" for ::1 at 2020-02-10 16:23:18 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1016)
+Completed 500 Internal Server Error in 252ms (ActiveRecord: 0.0ms | Allocations: 4498)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% @plants.each_with_index do |plant,index| %>
+    <%=  plant["tfvname"] \n%>
+<% end %>
+):
+1:    <% @plants.each_with_index do |plant,index| %>
+2:        <%=  plant["tfvname"] \n%>
+3:    <% end %>
+  
+app/views/plants/index.html.erb:2: syntax error, unexpected backslash, expecting ')'
+app/views/plants/index.html.erb:2: syntax error, unexpected backslash, expecting ')'
+app/views/plants/index.html.erb:2: syntax error, unexpected backslash, expecting ')'
+app/views/plants/index.html.erb:2: syntax error, unexpected backslash, expecting ')'
+app/views/plants/index.html.erb:2: syntax error, unexpected backslash, expecting ')'
+app/views/plants/index.html.erb:2: syntax error, unexpected backslash, expecting ')'
+Started GET "/plants" for ::1 at 2020-02-10 16:23:30 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1020)
+Completed 500 Internal Server Error in 225ms (ActiveRecord: 0.0ms | Allocations: 4510)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% @plants.each_with_index do |plant,index| %>
+    <%=  "plant["tfvname"]\n" %>
+<% end %>
+):
+1:    <% @plants.each_with_index do |plant,index| %>
+2:        <%=  "plant["tfvname"]\n" %>
+3:    <% end %>
+  
+app/views/plants/index.html.erb:2: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/plants/index.html.erb:2: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/plants/index.html.erb:2: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/plants/index.html.erb:2: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/plants/index.html.erb:2: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/plants/index.html.erb:2: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/plants" for ::1 at 2020-02-10 16:23:44 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 332)
+Completed 200 OK in 251ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 5404)
+
+
+Started GET "/plants" for ::1 at 2020-02-10 16:23:48 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 332)
+Completed 200 OK in 239ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 5392)
+
+
+Started GET "/plants" for ::1 at 2020-02-10 16:23:58 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1015)
+Completed 500 Internal Server Error in 659ms (ActiveRecord: 0.0ms | Allocations: 4489)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% @plants.each_with_index do |plant,index| %>
+    <%=  "#{plant["tfvname"]}" <br> %>
+<% end %>
+):
+1:    <% @plants.each_with_index do |plant,index| %>
+2:        <%=  "#{plant["tfvname"]}" <br> %>
+3:    <% end %>
+  
+app/views/plants/index.html.erb:2: syntax error, unexpected ')'
+app/views/plants/index.html.erb:3: syntax error, unexpected end, expecting ')'
+app/views/plants/index.html.erb:5: syntax error, unexpected end, expecting ')'
+app/views/plants/index.html.erb:2: syntax error, unexpected ')'
+app/views/plants/index.html.erb:3: syntax error, unexpected end, expecting ')'
+app/views/plants/index.html.erb:5: syntax error, unexpected end, expecting ')'
+app/views/plants/index.html.erb:2: syntax error, unexpected ')'
+app/views/plants/index.html.erb:3: syntax error, unexpected end, expecting ')'
+app/views/plants/index.html.erb:5: syntax error, unexpected end, expecting ')'
+app/views/plants/index.html.erb:2: syntax error, unexpected ')'
+app/views/plants/index.html.erb:3: syntax error, unexpected end, expecting ')'
+app/views/plants/index.html.erb:5: syntax error, unexpected end, expecting ')'
+app/views/plants/index.html.erb:2: syntax error, unexpected ')'
+app/views/plants/index.html.erb:3: syntax error, unexpected end, expecting ')'
+app/views/plants/index.html.erb:5: syntax error, unexpected end, expecting ')'
+app/views/plants/index.html.erb:2: syntax error, unexpected ')'
+app/views/plants/index.html.erb:3: syntax error, unexpected end, expecting ')'
+app/views/plants/index.html.erb:5: syntax error, unexpected end, expecting ')'
+Started GET "/plants" for ::1 at 2020-02-10 16:24:13 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 229)
+Completed 200 OK in 685ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 5292)
+
+
+Started GET "/plants" for ::1 at 2020-02-10 16:25:08 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  Rendered plants/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 256)
+Completed 200 OK in 815ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 5556)
+
+
