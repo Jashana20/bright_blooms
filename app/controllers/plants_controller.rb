@@ -1,8 +1,12 @@
+
 class PlantsController < ApplicationController
-    before_action :set_plant, only [:show, :edit, :update, :destroy]
+    before_action :set_plant, only: [:show, :edit, :update, :destroy]
 
     def index
-        @plants = Plant.all
+    
+        url = RestClient.get('http://tropicalfruitandveg.com/api/tfvjsonapi.php?search=all')
+        @plants = JSON.parse(url).shift
+
     end
 
     def new
