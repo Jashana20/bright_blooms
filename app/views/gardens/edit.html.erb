@@ -1,0 +1,15 @@
+<h3>Edit Garden form</h3>
+ 
+<%= form_for(@garden) do |f| %>
+  <label>Garden Name:</label>
+  <%= f.text_field :name %><br>
+
+  <label>Garden category (tropical, vegatables, fruits etc.):</label>
+  <%= f.text_field :category %><br>
+
+  <label>Select by alternative name:</label><br>
+  <%= f.collection_select :plant_id, Plant.all, :id, :tfvname %><br>
+ 
+  <%= f.submit %>
+
+<% end %>
