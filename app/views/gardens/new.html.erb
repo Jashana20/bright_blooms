@@ -8,7 +8,7 @@
   <%= f.text_field :category %><br>
 
   <label>Select plant by name:</label>
-  <%= f.collection_select :plant_id, Plant.all, :id, :tfvname %><br>
+  <%= f.collection_select :plants, Plant.all, :id, :tfvname %><br>
  
   <%= f.submit %>
 <% end %>

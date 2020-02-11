@@ -10,24 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 5) do
+ActiveRecord::Schema.define(version: 4) do
 
-  create_table "conditions", force: :cascade do |t|
-    t.string "climate"
-    t.string "soil"
-    t.string "propogation"
+  create_table "garden_plants", force: :cascade do |t|
+    t.integer "garden_id"
+    t.integer "plant_id"
   end
 
   create_table "gardens", force: :cascade do |t|
     t.string "name"
     t.string "category"
     t.integer "user_id"
-    t.integer "plant_id"
-  end
-
-  create_table "instructions", force: :cascade do |t|
-    t.integer "plant_id"
-    t.integer "condition_id"
   end
 
   create_table "plants", force: :cascade do |t|

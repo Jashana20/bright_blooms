@@ -5,7 +5,6 @@ class CreateGardens < ActiveRecord::Migration[6.0]
            t.string :name
            t.string :category
            t.integer :user_id
-           t.integer :plant_id
        end
     end
     

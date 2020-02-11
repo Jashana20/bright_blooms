@@ -10,11 +10,17 @@ class GardensController < ApplicationController
     end
 
     def show
+
     end
 
     def create 
-        @garden = Garden.create(garden_params(:name, :category, :user_id, :plant_id))
-        redirect_to garden_path(@garden)
+        @garden = Garden.new(garden_params)
+        @garden.user = current_user
+        @garden.save
+        @garden.plants << Plant.find(params[:garden][:plants].to_i)
+        if @garden.valid?
+          redirect_to gardens_path
+        end
     end
 
     def show
@@ -41,7 +47,7 @@ class GardensController < ApplicationController
         @garden = Garden.find(params[:id])
     end
 
-    def garden_params(*args)
-        params.require(:garden).permit(*args)
+    def garden_params
+        params.require(:garden).permit(:name, :category, :current_user)
     end 
 end 

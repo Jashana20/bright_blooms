@@ -1,5 +1,8 @@
 <h1>Your Garden:</h1>
 <%=@garden.name%><br>
+<% @garden.plants.each do |plant|%>
+    <%= plant.tfvname %>
+<% end %>
 
 <h2>Edit Garden:</h2>
 <%= link_to @garden.name, edit_garden_path(@garden)%><br>
