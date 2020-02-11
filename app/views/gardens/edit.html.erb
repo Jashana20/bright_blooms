@@ -8,8 +8,11 @@
   <%= f.text_field :category %><br>
 
   <label>Select by alternative name:</label><br>
-  <%= f.collection_select :plants, Plant.all, :id, :tfvname %><br>
- 
+  <% @garden.plants.each do |plant| %>
+    <%= plant.tfvname %> <br>
+  <% end %>
+
+  <%= link_to "Add/remove plants" %>
   <%= f.submit %>
 
 <% end %>

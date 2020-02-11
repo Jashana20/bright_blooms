@@ -28,15 +28,17 @@ class GardensController < ApplicationController
     end
 
     def edit
+        
     end
 
 
     def update
-        @garden.update(garden_params(:name, :category, :user_id, :plant_id))
-        redirect_to garden_path(@garden)
+        @garden.plants
+        redirect_to garden_path(@garden.id)
     end
 
-    def delete
+    def destroy
+        
         @garden.destroy
         redirect_to gardens_path
     end

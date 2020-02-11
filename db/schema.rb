@@ -42,5 +42,4 @@ ActiveRecord::Schema.define(version: 4) do
     t.string "bio"
     t.string "country"
   end
-
 end
