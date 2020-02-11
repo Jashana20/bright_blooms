@@ -1,0 +1,16 @@
+<h1>Your Garden:</h1>
+<%=@garden.name%><br>
+
+<h2>Edit Garden:</h2>
+<%= link_to @garden.name, edit_garden_path(@garden)%><br>
+
+<h2>Delete Garden:</h2>
+<form method="post" action="/garden/<%=@garden.id%>">
+<input id="hidden" type="hidden" name="_method" value="delete">
+<input type="submit" value="delete">
+</form><br>
+
+
+
+
+

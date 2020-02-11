@@ -9,6 +9,9 @@ class GardensController < ApplicationController
         @garden = Garden.new
     end
 
+    def show
+    end
+
     def create 
         @garden = Garden.create(garden_params(:name, :category, :user_id, :plant_id))
         redirect_to garden_path(@garden)
@@ -20,6 +23,7 @@ class GardensController < ApplicationController
 
     def edit
     end
+
 
     def update
         @garden.update(garden_params(:name, :category, :user_id, :plant_id))
