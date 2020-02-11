@@ -1,5 +1,18 @@
 <h3>New User Registration</h3>
- 
+
+<%= form_for(@user) do |form| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h4><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h4>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<% end %>
 <%= form_for(@user) do |f| %>
   <label>First Name:</label><br>
   <%= f.text_field :first_name %><br>
@@ -24,9 +37,6 @@
   
   <label>Bio (optional):</label><br>
   <%= f.text_field :bio %><br>
-
-  
-
  
   <%= f.submit %>
 <% end %>

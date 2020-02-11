@@ -1,6 +1,14 @@
 class User < ActiveRecord::Base
+    
     has_many :gardens
     has_many :plants, through: :gardens
+
+    has_secure_password
+    validates :email, {
+        presence: true,
+        uniqueness: true
+    }
+
     validates_confirmation_of :password
     
 

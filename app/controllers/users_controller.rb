@@ -10,8 +10,22 @@ class UsersController < ApplicationController
     end
 
     def create 
-        @user = User.create(user_params(:first_name, :last_name, :username, :password, :email, :bio, :country))
-        redirect_to user_path(@user)
+        # @user = User.create(user_params(:first_name, :last_name, :username, :password, :email, :bio, :country))
+        # redirect_to user_path(@user)
+
+        @user = User.new(user_params)
+        @user.email.downcase!
+
+        
+            if @user.save
+              flash[:notice] =  "User successfully created!"
+              redirect_to user_path(@user)
+            else
+              flash[:notice] = @user.errors.messages
+              render :new
+            end
+            
+        
     end
 
     def show
@@ -21,7 +35,7 @@ class UsersController < ApplicationController
     end
 
     def update
-        @user.update(user_params(:first_name, :last_name, :username, :password, :email, :bio, :country))
+        @user.update(user_params(:first_name, :last_name, :username, :password, :password_confirmation, :email, :bio, :country))
         redirect_to user_path(@user)
     end
 
@@ -36,7 +50,7 @@ class UsersController < ApplicationController
         @user = User.find(params[:id])
     end
 
-    def user_params(*args)
-        params.require(:user).permit(*args)
+    def user_params
+        params.require(:user).permit(:first_name, :last_name, :username, :password, :password_confirmation, :email, :bio, :country)
     end  
 end 
