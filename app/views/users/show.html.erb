@@ -1,4 +1,4 @@
-<h1>Profile</h1>
+<h1>Profile</h1> <h4><%= link_to "Edit Profile", edit_user_path(@user)%></h4>
 <p id="notice"><%= notice %></p>
 <h2><%= @user.full_name %></h2>
  
@@ -8,4 +8,6 @@
 <p> Bio: <%= @user.bio %></p> 
 
 
- 
+<%= link_to "Create New Garden", new_garden_path%><br>
+<%= link_to "Browse All Plants", plants_path%><br>
+<%= link_to 'Back', users_path %>

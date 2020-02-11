@@ -9992,6 +9992,7 @@ ActionController::UrlGenerationError (No route matches {:action=>"show", :contro
   
 app/controllers/gardens_controller.rb:17:in `create'
 >>>>>>> 776aa21d7b6ca0e2990514c2afff5dec9c17777c
+<<<<<<< HEAD
 Started GET "/" for ::1 at 2020-02-11 12:16:05 +0000
   [1m[35m (10.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -10148,3 +10149,816 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 142ms (Views: 139.4ms | ActiveRecord: 0.0ms | Allocations: 5829)
 
 
+=======
+Started GET "/users" for ::1 at 2020-02-11 13:03:53 +0000
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 273)
+Completed 200 OK in 58ms (Views: 39.0ms | ActiveRecord: 0.0ms | Allocations: 8097)
+
+
+Started GET "/users" for ::1 at 2020-02-11 13:05:52 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 161)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 2858)
+
+
+Started GET "/users/new" for ::1 at 2020-02-11 13:05:54 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 15.2ms | Allocations: 5330)
+Completed 200 OK in 27ms (Views: 17.1ms | ActiveRecord: 0.7ms | Allocations: 12491)
+
+
+Started GET "/users/new" for ::1 at 2020-02-11 13:06:18 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1239)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.0ms | Allocations: 3936)
+
+
+Started GET "/users" for ::1 at 2020-02-11 13:06:20 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 139)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 2033)
+
+
+Started GET "/users/new" for ::1 at 2020-02-11 13:06:20 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 809)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 2569)
+
+
+Started GET "/users" for ::1 at 2020-02-11 13:06:44 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 139)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 2824)
+
+
+Started GET "/users/new" for ::1 at 2020-02-11 13:06:45 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1238)
+Completed 200 OK in 16ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 3143)
+
+
+Started GET "/users" for ::1 at 2020-02-11 13:06:51 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 1787)
+
+
+Started GET "/users/new" for ::1 at 2020-02-11 13:06:53 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 806)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 2570)
+
+
+Started GET "/users/edit" for ::1 at 2020-02-11 13:07:06 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:50:in `set_user'
+Completed 404 Not Found in 23ms (ActiveRecord: 0.2ms | Allocations: 3987)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=edit):
+  
+app/controllers/users_controller.rb:50:in `set_user'
+Started GET "/users/new" for ::1 at 2020-02-11 13:07:24 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 823)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 2636)
+
+
+Started POST "/users" for ::1 at 2020-02-11 13:08:02 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"4n367S7cfsGzIvAiURFesc3/UyzeVHkOwT8xDEsp/emgEfo7kX87Q//bc+SS5fPrN+oZ3w/2fEJmGPJxQi67Eg==", "user"=>{"first_name"=>"dfwsw", "last_name"=>"gwerg", "username"=>"user444", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "email"=>"sduhuhwef@gmail.com", "country"=>"asde", "bio"=>""}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sduhuhwef@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "username", "password_digest", "email", "bio", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "dfwsw"], ["last_name", "gwerg"], ["username", "user444"], ["password_digest", "$2a$12$eRwoWKtORmBuUF6qNyP.ruIVCXmpLv03w6b4o4.vCYBJLyTFk/0d6"], ["email", "sduhuhwef@gmail.com"], ["bio", ""], ["country", "asde"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Redirected to http://localhost:3000/users/8
+Completed 302 Found in 209ms (ActiveRecord: 1.7ms | Allocations: 4221)
+
+
+Started GET "/users/8" for ::1 at 2020-02-11 13:08:02 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:50:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 217)
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.1ms | Allocations: 2642)
+
+
+Started GET "/users/8" for ::1 at 2020-02-11 13:09:08 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:50:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 335.4ms | Allocations: 145278)
+Completed 500 Internal Server Error in 339ms (ActiveRecord: 0.2ms | Allocations: 147057)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `garden' for #<#<Class:0x00007f98fca87680>:0x00007f98fca858d0>
+Did you mean?  garden_url):
+     8: <p> Bio: <%= @user.bio %></p> 
+     9: 
+    10: 
+    11: <%= link_to "Create New garden", garden_path(garden)%> <br>
+  
+app/views/users/show.html.erb:11
+Started GET "/users/new" for ::1 at 2020-02-11 13:09:25 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1256)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 3961)
+
+
+Started POST "/users" for ::1 at 2020-02-11 13:09:41 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"8+KsHx30MKkbXseJl7pGBIj+3gf3uXYZItc4G9MaCR6xjqzJold1K1enRE9UTutecuuU9CYbc1WF8Ptm2h1P5Q==", "user"=>{"first_name"=>"sdfws", "last_name"=>"sdgwsg", "username"=>"gwrgg", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "email"=>"sduhuhwef@gmail.com", "country"=>"sdfgdfg", "bio"=>""}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sduhuhwef@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1009)
+Completed 200 OK in 209ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 6101)
+
+
+Started POST "/users" for ::1 at 2020-02-11 13:10:02 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"8+KsHx30MKkbXseJl7pGBIj+3gf3uXYZItc4G9MaCR6xjqzJold1K1enRE9UTutecuuU9CYbc1WF8Ptm2h1P5Q==", "user"=>{"first_name"=>"sdfws", "last_name"=>"sdgwsg", "username"=>"gwrgg", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "email"=>"ewewe@gmail.com", "country"=>"sdfgdfg", "bio"=>""}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ewewe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "username", "password_digest", "email", "bio", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "sdfws"], ["last_name", "sdgwsg"], ["username", "gwrgg"], ["password_digest", "$2a$12$pbjEGQciGx3KAP90KlbVoO5qW8Ny/TdyE4f17vyIOvkf6CvhwRDTO"], ["email", "ewewe@gmail.com"], ["bio", ""], ["country", "sdfgdfg"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Redirected to http://localhost:3000/users/9
+Completed 302 Found in 207ms (ActiveRecord: 1.5ms | Allocations: 3746)
+
+
+Started GET "/users/9" for ::1 at 2020-02-11 13:10:02 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:50:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 261)
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.1ms | Allocations: 2677)
+
+
+Started GET "/gardens/new" for ::1 at 2020-02-11 13:10:05 +0000
+Processing by GardensController#new as HTML
+  Rendering gardens/new.html.erb within layouts/application
+  [1m[36mPlant Load (1.0ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/gardens/new.html.erb:11
+  Rendered gardens/new.html.erb within layouts/application (Duration: 19.1ms | Allocations: 19489)
+Completed 200 OK in 43ms (Views: 32.5ms | ActiveRecord: 1.8ms | Allocations: 26046)
+
+
+Started GET "/users/9" for ::1 at 2020-02-11 13:10:51 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:50:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 299)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.1ms | Allocations: 3484)
+
+
+Started GET "/plants" for ::1 at 2020-02-11 13:10:53 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (1.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants" ORDER BY "plants"."tfvname" ASC[0m
+  ↳ app/views/plants/index.html.erb:2:in `each_with_index'
+  Rendered plants/index.html.erb within layouts/application (Duration: 13.3ms | Allocations: 12250)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 1.1ms | Allocations: 14665)
+
+
+Started GET "/users/9" for ::1 at 2020-02-11 13:11:17 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:50:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 298)
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 0.1ms | Allocations: 3491)
+
+
+Started GET "/gardens/new" for ::1 at 2020-02-11 13:11:27 +0000
+Processing by GardensController#new as HTML
+  Rendering gardens/new.html.erb within layouts/application
+  [1m[36mPlant Load (1.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/gardens/new.html.erb:11
+  Rendered gardens/new.html.erb within layouts/application (Duration: 20.9ms | Allocations: 11876)
+Completed 200 OK in 27ms (Views: 23.9ms | ActiveRecord: 1.1ms | Allocations: 14571)
+
+
+Started GET "/plants" for ::1 at 2020-02-11 13:11:30 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (1.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" ORDER BY "plants"."tfvname" ASC[0m
+  ↳ app/views/plants/index.html.erb:2:in `each_with_index'
+  Rendered plants/index.html.erb within layouts/application (Duration: 15.2ms | Allocations: 12219)
+Completed 200 OK in 21ms (Views: 18.4ms | ActiveRecord: 1.4ms | Allocations: 14573)
+
+
+Started GET "/plants/282" for ::1 at 2020-02-11 13:11:32 +0000
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"282"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 282], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:39:in `set_plant'
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (Duration: 266.5ms | Allocations: 145101)
+Completed 500 Internal Server Error in 519ms (ActiveRecord: 0.2ms | Allocations: 151135)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `condition' for #<#<Class:0x00007f98fbc5b5e8>:0x00007f990193a2f0>
+Did you mean?  condition_url):
+    1: <h3>Plant name: <%= @plant["tfvname"] %></h3> 
+    2: <h4><%= link_to "Create garden with plant", new_garden_path %></h4>
+    3: <h4><%= link_to "Plant conditions", condition_path(condition) %></h4>
+    4: <p><h4>Botanical name: </h4> <%= @plant["botname"] %></p>
+    5: <p><h4>Other name(s): </h4><%= @plant["othname"] %></p>
+    6: <h4>Sample image: </h4><%= image_tag("#{@plant["imageurl"]}", :size => "200x200", :alt => "#{@plant["tfvname"]}") %>
+  
+app/views/plants/show.html.erb:3
+Started GET "/plants/181" for ::1 at 2020-02-11 13:11:40 +0000
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"181"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 181], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:39:in `set_plant'
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (Duration: 222.4ms | Allocations: 144893)
+Completed 500 Internal Server Error in 324ms (ActiveRecord: 0.2ms | Allocations: 147331)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `condition' for #<#<Class:0x00007f98fbc5b5e8>:0x00007f99019d2320>
+Did you mean?  condition_url):
+    1: <h3>Plant name: <%= @plant["tfvname"] %></h3> 
+    2: <h4><%= link_to "Create garden with plant", new_garden_path %></h4>
+    3: <h4><%= link_to "Plant conditions", condition_path(condition) %></h4>
+    4: <p><h4>Botanical name: </h4> <%= @plant["botname"] %></p>
+    5: <p><h4>Other name(s): </h4><%= @plant["othname"] %></p>
+    6: <h4>Sample image: </h4><%= image_tag("#{@plant["imageurl"]}", :size => "200x200", :alt => "#{@plant["tfvname"]}") %>
+  
+app/views/plants/show.html.erb:3
+Started GET "/plants/4" for ::1 at 2020-02-11 13:11:48 +0000
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:39:in `set_plant'
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (Duration: 283.2ms | Allocations: 144892)
+Completed 500 Internal Server Error in 383ms (ActiveRecord: 0.1ms | Allocations: 147330)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `condition' for #<#<Class:0x00007f98fbc5b5e8>:0x00007f98fc4bfe00>
+Did you mean?  condition_url):
+    1: <h3>Plant name: <%= @plant["tfvname"] %></h3> 
+    2: <h4><%= link_to "Create garden with plant", new_garden_path %></h4>
+    3: <h4><%= link_to "Plant conditions", condition_path(condition) %></h4>
+    4: <p><h4>Botanical name: </h4> <%= @plant["botname"] %></p>
+    5: <p><h4>Other name(s): </h4><%= @plant["othname"] %></p>
+    6: <h4>Sample image: </h4><%= image_tag("#{@plant["imageurl"]}", :size => "200x200", :alt => "#{@plant["tfvname"]}") %>
+  
+app/views/plants/show.html.erb:3
+Started GET "/plants" for ::1 at 2020-02-11 13:12:28 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (1.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants" ORDER BY "plants"."tfvname" ASC[0m
+  ↳ app/views/plants/index.html.erb:2:in `each_with_index'
+  Rendered plants/index.html.erb within layouts/application (Duration: 24.4ms | Allocations: 12219)
+Completed 200 OK in 31ms (Views: 28.3ms | ActiveRecord: 1.1ms | Allocations: 14930)
+
+
+Started GET "/plants/203" for ::1 at 2020-02-11 13:12:29 +0000
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"203"}
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 203], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:39:in `set_plant'
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 321)
+Completed 200 OK in 145ms (Views: 4.2ms | ActiveRecord: 0.1ms | Allocations: 4163)
+
+
+Started GET "/gardens/new" for ::1 at 2020-02-11 13:12:31 +0000
+Processing by GardensController#new as HTML
+  Rendering gardens/new.html.erb within layouts/application
+  [1m[36mPlant Load (0.9ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/gardens/new.html.erb:11
+  Rendered gardens/new.html.erb within layouts/application (Duration: 10.2ms | Allocations: 11876)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.9ms | Allocations: 14213)
+
+
+Started GET "/gardens/new" for ::1 at 2020-02-11 13:12:35 +0000
+Processing by GardensController#new as HTML
+  Rendering gardens/new.html.erb within layouts/application
+  [1m[36mPlant Load (1.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/gardens/new.html.erb:11
+  Rendered gardens/new.html.erb within layouts/application (Duration: 10.3ms | Allocations: 11676)
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 1.1ms | Allocations: 13434)
+
+
+Started GET "/gardens/new" for ::1 at 2020-02-11 13:12:41 +0000
+Processing by GardensController#new as HTML
+  Rendering gardens/new.html.erb within layouts/application
+  [1m[36mPlant Load (1.0ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/gardens/new.html.erb:11
+  Rendered gardens/new.html.erb within layouts/application (Duration: 9.0ms | Allocations: 11676)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 1.0ms | Allocations: 13436)
+
+
+Started GET "/gardens/new" for ::1 at 2020-02-11 13:12:45 +0000
+Processing by GardensController#new as HTML
+  Rendering gardens/new.html.erb within layouts/application
+  [1m[36mPlant Load (1.5ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/gardens/new.html.erb:11
+  Rendered gardens/new.html.erb within layouts/application (Duration: 17.7ms | Allocations: 11676)
+Completed 200 OK in 21ms (Views: 18.2ms | ActiveRecord: 1.5ms | Allocations: 13445)
+
+
+Started GET "/users/9" for ::1 at 2020-02-11 13:13:17 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:50:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 263.5ms | Allocations: 145288)
+Completed 500 Internal Server Error in 268ms (ActiveRecord: 0.2ms | Allocations: 147033)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `garden' for #<#<Class:0x00007f98fc391600>:0x00007f98fc3a2bd0>
+Did you mean?  garden_url):
+     7: <p> Country: <%= @user.country %></p> 
+     8: <p> Bio: <%= @user.bio %></p> 
+     9: 
+    10: <%= link_to "See Your Existing Gardens", garden_path(garden)%> <br>
+    11: <%= link_to "Create New Garden", new_garden_path%> <br>
+    12: <%= link_to "Browse All Plants", plants_path%> <br>
+  
+app/views/users/show.html.erb:10
+Started GET "/users/new" for ::1 at 2020-02-11 13:14:03 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1254)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 3347)
+
+
+Started GET "/users/new" for ::1 at 2020-02-11 13:14:04 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 813)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 2576)
+
+
+Started POST "/users" for ::1 at 2020-02-11 13:14:40 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"+GboLbUW5xEOx7Ztf1eUEbkRugcpAlmdOhMq30CUfEG6Cuj7CrWik0I+Nau8ozlLQwTw9PigXNGdNOmiSZM6ug==", "user"=>{"first_name"=>"dfgdf", "last_name"=>"dfgdeh", "username"=>"dgdrge", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "email"=>"sfer@email.com", "country"=>"rgerg", "bio"=>""}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sfer@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "username", "password_digest", "email", "bio", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "dfgdf"], ["last_name", "dfgdeh"], ["username", "dgdrge"], ["password_digest", "$2a$12$KJRGl34rxo8YnR4YoRLSvePHKe095fBZuCBLRwxmeBZBi6MZgejEC"], ["email", "sfer@email.com"], ["bio", ""], ["country", "rgerg"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Redirected to http://localhost:3000/users/10
+Completed 302 Found in 209ms (ActiveRecord: 1.3ms | Allocations: 3715)
+
+
+Started GET "/users/10" for ::1 at 2020-02-11 13:14:40 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:50:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 190.6ms | Allocations: 145173)
+Completed 500 Internal Server Error in 192ms (ActiveRecord: 0.1ms | Allocations: 146189)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `garden' for #<#<Class:0x00007f98fc391600>:0x00007f9901ac79b0>
+Did you mean?  garden_url):
+     7: <p> Country: <%= @user.country %></p> 
+     8: <p> Bio: <%= @user.bio %></p> 
+     9: 
+    10: <%= link_to "See Your Existing Gardens", garden_path(garden)%> <br>
+    11: <%= link_to "Create New Garden", new_garden_path%> <br>
+    12: <%= link_to "Browse All Plants", plants_path%> <br>
+  
+app/views/users/show.html.erb:10
+Started GET "/users/10" for ::1 at 2020-02-11 13:14:49 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:50:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 301)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.1ms | Allocations: 3502)
+
+
+Started GET "/users/10" for ::1 at 2020-02-11 13:16:23 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:50:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 338)
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.1ms | Allocations: 3516)
+
+
+Started GET "/users/new" for ::1 at 2020-02-11 13:16:26 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1238)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 3146)
+
+
+Started GET "/users/10" for ::1 at 2020-02-11 13:16:44 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:50:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 335)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.2ms | Allocations: 3520)
+
+
+Started GET "/users/new" for ::1 at 2020-02-11 13:16:53 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1238)
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.0ms | Allocations: 3144)
+
+
+Started GET "/gardens/new" for ::1 at 2020-02-11 13:16:56 +0000
+Processing by GardensController#new as HTML
+  Rendering gardens/new.html.erb within layouts/application
+  [1m[36mPlant Load (1.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/gardens/new.html.erb:11
+  Rendered gardens/new.html.erb within layouts/application (Duration: 20.3ms | Allocations: 11876)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 1.1ms | Allocations: 14210)
+
+
+Started GET "/plants" for ::1 at 2020-02-11 13:16:59 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (2.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants" ORDER BY "plants"."tfvname" ASC[0m
+  ↳ app/views/plants/index.html.erb:2:in `each_with_index'
+  Rendered plants/index.html.erb within layouts/application (Duration: 14.0ms | Allocations: 12224)
+Completed 200 OK in 19ms (Views: 15.4ms | ActiveRecord: 2.1ms | Allocations: 14572)
+
+
+Started GET "/gardens/new" for ::1 at 2020-02-11 13:17:06 +0000
+Processing by GardensController#new as HTML
+  Rendering gardens/new.html.erb within layouts/application
+  [1m[36mPlant Load (1.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/gardens/new.html.erb:11
+  Rendered gardens/new.html.erb within layouts/application (Duration: 14.0ms | Allocations: 11685)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 1.2ms | Allocations: 13450)
+
+
+Started GET "/plants" for ::1 at 2020-02-11 13:17:08 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (4.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" ORDER BY "plants"."tfvname" ASC[0m
+  ↳ app/views/plants/index.html.erb:2:in `each_with_index'
+  Rendered plants/index.html.erb within layouts/application (Duration: 31.9ms | Allocations: 12087)
+Completed 200 OK in 39ms (Views: 31.9ms | ActiveRecord: 4.3ms | Allocations: 13863)
+
+
+Started GET "/plants/3" for ::1 at 2020-02-11 13:17:10 +0000
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:39:in `set_plant'
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 317)
+Completed 200 OK in 160ms (Views: 4.7ms | ActiveRecord: 0.1ms | Allocations: 4148)
+
+
+Started GET "/users/new" for ::1 at 2020-02-11 13:17:28 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 815)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 2578)
+
+
+Started GET "/users/new" for ::1 at 2020-02-11 13:18:13 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1243)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 3942)
+
+
+Started GET "/users/10" for ::1 at 2020-02-11 13:18:21 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:50:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 211.2ms | Allocations: 145197)
+Completed 500 Internal Server Error in 214ms (ActiveRecord: 0.2ms | Allocations: 146336)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x00007f98fdd8d810>:0x00007f98fdfd3660>
+Did you mean?  @user):
+    1: <h1>Profile</h1> <h4><%= link_to "Edit Profile", edit_user_path(user)%></h4>
+    2: <p id="notice"><%= notice %></p>
+    3: <h2><%= @user.full_name %></h2>
+    4:  
+  
+app/views/users/show.html.erb:1
+Started GET "/users/new" for ::1 at 2020-02-11 13:20:20 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1243)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 3936)
+
+
+Started GET "/users" for ::1 at 2020-02-11 13:20:22 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 143)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 2036)
+
+
+Started GET "/users/new" for ::1 at 2020-02-11 13:20:24 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 809)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 2579)
+
+
+Started POST "/users" for ::1 at 2020-02-11 13:20:41 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"9aYAliB1QQmIq/Q0tozinb7oQepMEQW4ycUUkelgs0y3ygBAn9YEi8RSd/J1eE/HRP0LGZ2zAPRu4tfs4Gf1tw==", "user"=>{"first_name"=>"afwet", "last_name"=>"weerter", "username"=>"rgerr", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "email"=>"asfwe@email.com", "country"=>"edfwef", "bio"=>""}, "commit"=>"Create User"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "asfwe@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "username", "password_digest", "email", "bio", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "afwet"], ["last_name", "weerter"], ["username", "rgerr"], ["password_digest", "$2a$12$buphTPyD77ijDnzGDe6YnOCIQH8IsP7eXtaMrHLDBBQr/tXuUamT2"], ["email", "asfwe@email.com"], ["bio", ""], ["country", "edfwef"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Redirected to http://localhost:3000/users/11
+Completed 302 Found in 209ms (ActiveRecord: 1.2ms | Allocations: 3709)
+
+
+Started GET "/users/11" for ::1 at 2020-02-11 13:20:42 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:50:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 341)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.1ms | Allocations: 2759)
+
+
+Started GET "/users/11/edit" for ::1 at 2020-02-11 13:20:44 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:50:in `set_user'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1059)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.2ms | Allocations: 3456)
+
+
+Started GET "/users/new" for ::1 at 2020-02-11 13:21:05 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 807)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 2573)
+
+
+Started GET "/users" for ::1 at 2020-02-11 13:21:10 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 37)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 1792)
+
+
+Started GET "/users/new" for ::1 at 2020-02-11 13:21:12 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 806)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 2571)
+
+
+Started POST "/users" for ::1 at 2020-02-11 13:21:59 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"qY1TfGUX3ctuvU+aJePLJRkA97JSP1FeHyFBBv5Lo4/r4VOq2rSYSSJEzFzmF2Z/4xW9QYOdVBK4BoJ790zldA==", "user"=>{"first_name"=>"wegweg", "last_name"=>"wefwefw", "username"=>"efwew", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "email"=>"dfrgedrg@email.com", "country"=>"awqerw", "bio"=>""}, "commit"=>"Create User"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dfrgedrg@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "username", "password_digest", "email", "bio", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "wegweg"], ["last_name", "wefwefw"], ["username", "efwew"], ["password_digest", "$2a$12$i3ylnywxUz7.VcrdNR2Sbu043uZW9iOyvS89CLjb8CQeDTTg4XXBu"], ["email", "dfrgedrg@email.com"], ["bio", ""], ["country", "awqerw"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Redirected to http://localhost:3000/users/12
+Completed 302 Found in 209ms (ActiveRecord: 1.4ms | Allocations: 3713)
+
+
+Started GET "/users/12" for ::1 at 2020-02-11 13:21:59 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:50:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 123)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms | Allocations: 2396)
+
+
+Started GET "/plants" for ::1 at 2020-02-11 13:22:10 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (1.5ms)[0m  [1m[34mSELECT "plants".* FROM "plants" ORDER BY "plants"."tfvname" ASC[0m
+  ↳ app/views/plants/index.html.erb:2:in `each_with_index'
+  Rendered plants/index.html.erb within layouts/application (Duration: 16.1ms | Allocations: 12219)
+Completed 200 OK in 22ms (Views: 19.2ms | ActiveRecord: 1.5ms | Allocations: 14561)
+
+
+Started GET "/gardens/new" for ::1 at 2020-02-11 13:22:14 +0000
+Processing by GardensController#new as HTML
+  Rendering gardens/new.html.erb within layouts/application
+  [1m[36mPlant Load (1.0ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/gardens/new.html.erb:11
+  Rendered gardens/new.html.erb within layouts/application (Duration: 9.3ms | Allocations: 11876)
+Completed 200 OK in 15ms (Views: 12.1ms | ActiveRecord: 1.0ms | Allocations: 14213)
+
+
+Started GET "/plants" for ::1 at 2020-02-11 13:22:17 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (1.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants" ORDER BY "plants"."tfvname" ASC[0m
+  ↳ app/views/plants/index.html.erb:2:in `each_with_index'
+  Rendered plants/index.html.erb within layouts/application (Duration: 15.7ms | Allocations: 12092)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 1.2ms | Allocations: 13868)
+
+
+Started GET "/plants/102" for ::1 at 2020-02-11 13:22:18 +0000
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"102"}
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 102], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:39:in `set_plant'
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 315)
+Completed 200 OK in 148ms (Views: 4.3ms | ActiveRecord: 0.1ms | Allocations: 4145)
+
+
+Started GET "/gardens/new" for ::1 at 2020-02-11 13:22:20 +0000
+Processing by GardensController#new as HTML
+  Rendering gardens/new.html.erb within layouts/application
+  [1m[36mPlant Load (1.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/gardens/new.html.erb:11
+  Rendered gardens/new.html.erb within layouts/application (Duration: 10.4ms | Allocations: 11685)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 1.2ms | Allocations: 13449)
+
+
+Started GET "/plants" for ::1 at 2020-02-11 13:22:29 +0000
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (1.0ms)[0m  [1m[34mSELECT "plants".* FROM "plants" ORDER BY "plants"."tfvname" ASC[0m
+  ↳ app/views/plants/index.html.erb:2:in `each_with_index'
+  Rendered plants/index.html.erb within layouts/application (Duration: 12.3ms | Allocations: 12088)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 1.0ms | Allocations: 13863)
+
+
+Started GET "/plants/101" for ::1 at 2020-02-11 13:22:31 +0000
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"101"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:39:in `set_plant'
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 82)
+Completed 200 OK in 167ms (Views: 3.8ms | ActiveRecord: 0.2ms | Allocations: 3768)
+
+
+Started GET "/users/12" for ::1 at 2020-02-11 13:26:13 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:50:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 373)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.1ms | Allocations: 3555)
+
+
+Started GET "/users" for ::1 at 2020-02-11 13:26:15 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 138)
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.0ms | Allocations: 2038)
+
+
+Started GET "/users/new" for ::1 at 2020-02-11 13:26:18 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1280)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 3188)
+
+
+Started GET "/users" for ::1 at 2020-02-11 13:26:20 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 37)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 1798)
+
+
+Started GET "/users" for ::1 at 2020-02-11 13:26:23 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 1792)
+
+
+Started GET "/users/new" for ::1 at 2020-02-11 13:28:58 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 17.8ms | Allocations: 828)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.0ms | Allocations: 2597)
+
+
+Started POST "/users" for ::1 at 2020-02-11 13:29:15 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"esky39HdcGmaaqAfE0voovT8gcNc0dt0hcdMcM0cnnU4pTIJbn4169aTI9nQv0X4DunLMI1z3jgi4I8NxBvYjg==", "user"=>{"first_name"=>"fhjjyf", "last_name"=>"khgkug", "username"=>"hugiutg", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "email"=>"yfuyfy@email.com", "country"=>"swef", "bio"=>""}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "yfuyfy@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "username", "password_digest", "email", "bio", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "fhjjyf"], ["last_name", "khgkug"], ["username", "hugiutg"], ["password_digest", "$2a$12$QUG7KI3mCZ6.SLNkEq8tN.tXvru9Wqy3nbYVsmlorED4JSDsrv55y"], ["email", "yfuyfy@email.com"], ["bio", ""], ["country", "swef"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Redirected to http://localhost:3000/users/13
+Completed 302 Found in 206ms (ActiveRecord: 1.6ms | Allocations: 3713)
+
+
+Started GET "/users/13" for ::1 at 2020-02-11 13:29:15 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:50:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 145)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.1ms | Allocations: 2416)
+
+
+Started GET "/gardens/new" for ::1 at 2020-02-11 13:29:17 +0000
+Processing by GardensController#new as HTML
+  Rendering gardens/new.html.erb within layouts/application
+  [1m[36mPlant Load (1.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/gardens/new.html.erb:11
+  Rendered gardens/new.html.erb within layouts/application (Duration: 9.3ms | Allocations: 11881)
+Completed 200 OK in 15ms (Views: 11.9ms | ActiveRecord: 1.1ms | Allocations: 14218)
+
+
+Started POST "/gardens" for ::1 at 2020-02-11 13:29:25 +0000
+Processing by GardensController#create as HTML
+  Parameters: {"authenticity_token"=>"OV41af8r5oh1kBVxY2KON7qXyWUsrDuIYFDhOY6TwLZCCACvSe5IHtxB2BcCvVaAyaM6KtuWkFMma2oelRng7w==", "garden"=>{"name"=>"jhguk", "category"=>"uigiugi", "plant_id"=>"23"}, "commit"=>"Create Garden"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/gardens_controller.rb:16:in `create'
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:16:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/gardens_controller.rb:16:in `create'
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.4ms | Allocations: 8654)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"gardens", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/gardens_controller.rb:17:in `create'
+>>>>>>> bebca3d8bc2819e90b3dfcfbce9c596b55899917
