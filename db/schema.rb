@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 5) do
   end
 
   create_table "plants", force: :cascade do |t|
+    t.string "tfvname"
     t.string "botname"
     t.string "othname"
     t.string "image_url"

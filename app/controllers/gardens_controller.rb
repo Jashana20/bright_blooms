@@ -1,5 +1,5 @@
 class GardensController < ApplicationController
-    before_action :set_garden, only [:show, :edit, :update, :destroy]
+    before_action :set_garden, only: [:show, :edit, :update, :destroy]
 
     def index
         @gardens = Garden.all
@@ -10,7 +10,7 @@ class GardensController < ApplicationController
     end
 
     def create 
-        @garden = Garden.create(garden_params(:name, :catgeory, :user_id, :plant_id))
+        @garden = Garden.create(garden_params(:name, :category, :user_id, :plant_id))
         redirect_to garden_path(@garden)
     end
 

@@ -11,5 +11,4 @@ class CreatePlants < ActiveRecord::Migration[6.0]
            t.string :health
         end
     end
-    
 end 

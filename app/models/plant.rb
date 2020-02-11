@@ -4,8 +4,16 @@ class Plant < ActiveRecord::Base
     has_many :instructions
     has_many :conditions, through: :instructions
 
-    def self.show_all_plants
-
-        
+    def show_all_plants
+        url = RestClient.get('http://tropicalfruitandveg.com/api/tfvjsonapi.php?search=all')
+        @plant = JSON.parse(url)
     end
+
+    def self.plant_names
+        url = RestClient.get('http://tropicalfruitandveg.com/api/tfvjsonapi.php?search=all')
+        @plant = JSON.parse(url).shift[1]
+    end
+
+    
+
 end 

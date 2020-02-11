@@ -5,10 +5,10 @@
   <%= f.text_field :name %>
 
   <label>Garden category (tropical, vegatables, fruits etc.):</label>
-  <%= f.collection_select :category %>
+  <%= f.text_field :category %>
 
   <label>Select by alternative name:</label><br>
-  <%= f.collection_select :plant, :plant_id, Plant.all, :id, :botname %>
+  <%= f.collection_select :plant_id, Plant.all, :id, :tfvname %>
  
   <%= f.submit %>
 <% end %>

@@ -8,4 +8,11 @@
 
 
 
+url = RestClient.get('http://tropicalfruitandveg.com/api/tfvjsonapi.php?search=all')
+@plant = JSON.parse(url).shift[1]
+
+
+@plant.each do |plant|
+    Plant.create("tfvname" => plant["tfvname"], "botname" => plant["botname"], "othname" => plant["othname"], "image_url" => plant["imageurl"])
+end
 

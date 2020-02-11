@@ -1,0 +1,10 @@
+<h3>Plant name: <%= @plant["tfvname"] %></h3>
+<p><h4>Botanical name: </h4> <%= @plant["botname"] %></p>
+<p><h4>Other name(s): </h4><%= @plant["othname"] %></p>
+<h4>Sample image: </h4><%= image_tag("#{@plant["imageurl"]}", :size => "200x200", :alt => "#{@plant["tfvname"]}") %>
+<p><h4>Description: </h4><%= @plant["description"] %></p>
+<p><h4>Uses: </h4><%= @plant["uses"] %></p>
+<p><h4>Propagation: </h4><%= @plant["propagation"] %></p>
+<p><h4>Soil: </h4><%= @plant["soil"] %></p>
+<p><h4>Climate: </h4><%= @plant["climate"] %></p>
+<p><h4>Health effects: </h4><%= @plant["health"] %></p>

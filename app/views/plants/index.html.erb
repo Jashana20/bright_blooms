@@ -1,3 +1,4 @@
+<h1>All plant names:</h1>
 <% @plants.each_with_index do |plant,index| %>
-    <%=  plant["botname"] %> <br>
+    <%= link_to plant.tfvname, plant_path(plant)%> <br>
 <% end %>
