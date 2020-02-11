@@ -23,9 +23,7 @@ class UsersController < ApplicationController
             else
               flash[:notice] = @user.errors.messages
               render :new
-            end
-            
-        
+            end         
     end
 
     def show
