@@ -10,8 +10,6 @@ class UsersController < ApplicationController
     end
 
     def create 
-        # @user = User.create(user_params(:first_name, :last_name, :username, :password, :email, :bio, :country))
-        # redirect_to user_path(@user)
 
         @user = User.new(user_params)
         @user.email.downcase!

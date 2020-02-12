@@ -1,6 +1,7 @@
 class GardensController < ApplicationController
     before_action :set_garden, only: [:show, :edit, :update, :destroy]
-
+    before_action :authorize_user, only: [:new, :create, :edit,:update,:destroy]
+    before_action :garden_belongs_to_current_user?, only: [:edit, :update, :destroy]
     def index
         @gardens = Garden.all
     end
@@ -33,10 +34,12 @@ class GardensController < ApplicationController
 
 
     def update
-        @garden.plants
+        @garden.update(garden_params)
         redirect_to garden_path(@garden.id)
     end
 
+    # @user.update(user_params(:first_name, :last_name, :username, :password, :password_confirmation, :email, :bio, :country))
+    # redirect_to user_path(@user)
     def destroy
         
         @garden.destroy
@@ -52,4 +55,11 @@ class GardensController < ApplicationController
     def garden_params
         params.require(:garden).permit(:name, :category, :current_user)
     end 
+
+    def garden_belongs_to_current_user?
+        unless Garden.find(params[:id]).user == current_user
+            flash[:notice] = "Please leave other people's gardens alone"
+            redirect_to gardens_path
+        end
+    end
 end 

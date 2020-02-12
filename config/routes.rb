@@ -4,11 +4,12 @@ Rails.application.routes.draw do
   resources :gardens
   resources :conditions, only: [:show]
   resources :instructions
-  resources :sessions, only: [:create]
+  
   get '/', to: 'users#index'
-  get '/login', to: 'sessions#new'
+  get '/login', to: 'sessions#new', as: "new_login"
   post '/login', to: 'sessions#create'
-  delete '/logout', to: 'sessions#destroy'
+
+  get '/sessions', to: 'sessions#destroy'
 
   
 end

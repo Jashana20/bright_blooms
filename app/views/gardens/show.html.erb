@@ -1,22 +1,15 @@
 <h1>Your Garden:</h1>
 <%=@garden.name%><br>
+<form action="/gardens/<%=@garden.id%>/edit" method="get">
+<input type="submit" value="Edit Garden" name="Submit" id="frm1_submit" /><br>
+<h3>Your garden contains these plants:</h3>
 <% @garden.plants.each do |plant|%>
     <%= plant.tfvname %>
+</form>
 <% end %>
-
-<h2>Edit Garden:</h2>
-<%= link_to @garden.name, edit_garden_path(@garden)%><br>
-
-<h2>Delete Garden:</h2>
+<h4>Delete Garden:</h4>
 <form method="post" action="/gardens/<%=@garden.id%>">
 <input id="hidden" type="hidden" name="_method" value="delete">
 <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
 <input type="submit" value="delete">
-
-
 </form><br>
-
-
-
-
-
