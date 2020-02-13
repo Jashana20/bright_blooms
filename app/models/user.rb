@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
         full_name = self.first_name + " " + self.last_name
     end
 
-    # def user_gardens
-    #     @user_gardens = @user.gardens
-    # end
+    def user_gardens
+        @user_gardens = self.gardens
+    end
 end 

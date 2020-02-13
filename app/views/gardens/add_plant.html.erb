@@ -1,0 +1,5 @@
+<h3>Select a plant you'd like to add to your garden:</h3>
+<%= form_tag("/gardens/#{@garden.id}/add_plant") do %>
+    <%= collection_select :garden, :plant_ids, Plant.all.order(:tfvname), :id, :tfvname %><br>
+    <%= submit_tag "Add plant" %>
+<% end %>
