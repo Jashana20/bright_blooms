@@ -13,6 +13,6 @@
 <% end %>
 <%= link_to "Add a plant", add_plant_path %>
 <h4>Delete Garden:</h4>
-<%= link_to "Delete", garden_path(@garden), :method => :delete %>
+<%= button_to "delete", garden_path(@garden), :method => :delete %>
 
 </form>

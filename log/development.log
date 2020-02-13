@@ -27779,3 +27779,620 @@ Processing by GardensController#show as HTML
 Completed 200 OK in 16ms (Views: 12.7ms | ActiveRecord: 0.7ms | Allocations: 4608)
 
 
+Started GET "/gardens" for ::1 at 2020-02-13 10:04:02 +0000
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GardensController#index as HTML
+  Rendering gardens/index.html.erb within layouts/application
+  [1m[36mGarden Load (0.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  ↳ app/views/gardens/index.html.erb:2
+  Rendered gardens/index.html.erb within layouts/application (Duration: 15.0ms | Allocations: 4460)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 200 OK in 73ms (Views: 50.3ms | ActiveRecord: 2.5ms | Allocations: 20721)
+
+
+Started GET "/gardens/19" for ::1 at 2020-02-13 10:04:05 +0000
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mGarden Load (0.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:58:in `set_garden'
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" INNER JOIN "garden_plants" ON "plants"."id" = "garden_plants"."plant_id" WHERE "garden_plants"."garden_id" = ?[0m  [["garden_id", 19]]
+  ↳ app/views/gardens/show.html.erb:10
+  Rendered gardens/show.html.erb within layouts/application (Duration: 48.1ms | Allocations: 12881)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 200 OK in 54ms (Views: 50.1ms | ActiveRecord: 1.6ms | Allocations: 16470)
+
+
+Started GET "/gardens/19/add_plant" for ::1 at 2020-02-13 10:04:13 +0000
+Processing by GardensController#add_plant as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mGarden Load (0.3ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:58:in `set_garden'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE Garden Load (0.0ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:66:in `garden_belongs_to_current_user?'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:66:in `garden_belongs_to_current_user?'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering gardens/add_plant.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "plants"."id" FROM "plants" INNER JOIN "garden_plants" ON "plants"."id" = "garden_plants"."plant_id" WHERE "garden_plants"."garden_id" = ?[0m  [["garden_id", 19]]
+  ↳ app/views/gardens/add_plant.html.erb:3
+  [1m[36mPlant Load (1.0ms)[0m  [1m[34mSELECT "plants".* FROM "plants" ORDER BY "plants"."tfvname" ASC[0m
+  ↳ app/views/gardens/add_plant.html.erb:3
+  Rendered gardens/add_plant.html.erb within layouts/application (Duration: 8.3ms | Allocations: 5589)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 200 OK in 22ms (Views: 10.4ms | ActiveRecord: 1.6ms | Allocations: 11814)
+
+
+Started POST "/gardens/19/add_plant" for ::1 at 2020-02-13 10:04:17 +0000
+Processing by GardensController#add_direct as HTML
+  Parameters: {"authenticity_token"=>"JM6bqgawjGhmzTXAuUZPrx7NaH8Acyjhud8JfC1191qBBelr+NKPMfBqg6zKqq56T9GPxeHTiSieD2iHBwxJIQ==", "garden"=>{"plant_ids"=>"25"}, "commit"=>"Add plant", "id"=>"19"}
+  [1m[36mGarden Load (0.1ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:58:in `set_garden'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE Garden Load (0.0ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:66:in `garden_belongs_to_current_user?'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:66:in `garden_belongs_to_current_user?'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:51:in `add_direct'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/gardens_controller.rb:51:in `add_direct'
+  [1m[36mGardenPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "garden_plants" ("garden_id", "plant_id") VALUES (?, ?)[0m  [["garden_id", 19], ["plant_id", 25]]
+  ↳ app/controllers/gardens_controller.rb:51:in `add_direct'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/gardens_controller.rb:51:in `add_direct'
+Redirected to http://localhost:3000/gardens/19
+Completed 302 Found in 16ms (ActiveRecord: 1.9ms | Allocations: 8754)
+
+
+Started GET "/gardens/19" for ::1 at 2020-02-13 10:04:17 +0000
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mGarden Load (0.1ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:58:in `set_garden'
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants" INNER JOIN "garden_plants" ON "plants"."id" = "garden_plants"."plant_id" WHERE "garden_plants"."garden_id" = ?[0m  [["garden_id", 19]]
+  ↳ app/views/gardens/show.html.erb:10
+  Rendered gardens/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1141)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.4ms | Allocations: 4447)
+
+
+Started GET "/gardens/19" for ::1 at 2020-02-13 10:04:19 +0000
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mGarden Load (0.1ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:58:in `set_garden'
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants" INNER JOIN "garden_plants" ON "plants"."id" = "garden_plants"."plant_id" WHERE "garden_plants"."garden_id" = ?[0m  [["garden_id", 19]]
+  ↳ app/views/gardens/show.html.erb:10
+  Rendered gardens/show.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1137)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.4ms | Allocations: 4448)
+
+
+Started GET "/gardens/19" for ::1 at 2020-02-13 10:05:30 +0000
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mGarden Load (0.1ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:58:in `set_garden'
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" INNER JOIN "garden_plants" ON "plants"."id" = "garden_plants"."plant_id" WHERE "garden_plants"."garden_id" = ?[0m  [["garden_id", 19]]
+  ↳ app/views/gardens/show.html.erb:10
+  Rendered gardens/show.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1471)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 200 OK in 18ms (Views: 14.4ms | ActiveRecord: 0.6ms | Allocations: 5848)
+
+
+Started DELETE "/gardens/19" for ::1 at 2020-02-13 10:05:32 +0000
+Processing by GardensController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YrR7/PrGluaTKEvjwZ3w/NC27Vw252UBj51PwtmEikLfZrHxUKSiK5JVGpJaYK2rDGD7UYcSHuAtl71vfFlQOA==", "id"=>"19"}
+  [1m[36mGarden Load (0.1ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:58:in `set_garden'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE Garden Load (0.0ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:66:in `garden_belongs_to_current_user?'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:66:in `garden_belongs_to_current_user?'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/gardens_controller.rb:41:in `destroy'
+  [1m[36mGarden Destroy (0.4ms)[0m  [1m[31mDELETE FROM "gardens" WHERE "gardens"."id" = ?[0m  [["id", 19]]
+  ↳ app/controllers/gardens_controller.rb:41:in `destroy'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/gardens_controller.rb:41:in `destroy'
+Redirected to http://localhost:3000/gardens
+Completed 302 Found in 15ms (ActiveRecord: 1.8ms | Allocations: 4566)
+
+
+Started GET "/gardens" for ::1 at 2020-02-13 10:05:32 +0000
+Processing by GardensController#index as HTML
+  Rendering gardens/index.html.erb within layouts/application
+  [1m[36mGarden Load (0.1ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  ↳ app/views/gardens/index.html.erb:2
+  Rendered gardens/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1063)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 0.7ms | Allocations: 4021)
+
+
+Started GET "/gardens/20" for ::1 at 2020-02-13 10:05:34 +0000
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mGarden Load (0.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:58:in `set_garden'
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants" INNER JOIN "garden_plants" ON "plants"."id" = "garden_plants"."plant_id" WHERE "garden_plants"."garden_id" = ?[0m  [["garden_id", 20]]
+  ↳ app/views/gardens/show.html.erb:10
+  Rendered gardens/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1333)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.5ms | Allocations: 4636)
+
+
+Started GET "/gardens/20/add_plant" for ::1 at 2020-02-13 10:05:36 +0000
+Processing by GardensController#add_plant as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mGarden Load (0.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:58:in `set_garden'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE Garden Load (0.0ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:66:in `garden_belongs_to_current_user?'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:66:in `garden_belongs_to_current_user?'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering gardens/add_plant.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "plants"."id" FROM "plants" INNER JOIN "garden_plants" ON "plants"."id" = "garden_plants"."plant_id" WHERE "garden_plants"."garden_id" = ?[0m  [["garden_id", 20]]
+  ↳ app/views/gardens/add_plant.html.erb:3
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" ORDER BY "plants"."tfvname" ASC[0m
+  ↳ app/views/gardens/add_plant.html.erb:3
+  Rendered gardens/add_plant.html.erb within layouts/application (Duration: 5.6ms | Allocations: 5444)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 200 OK in 19ms (Views: 8.3ms | ActiveRecord: 0.9ms | Allocations: 10820)
+
+
+Started POST "/gardens/20/add_plant" for ::1 at 2020-02-13 10:05:40 +0000
+Processing by GardensController#add_direct as HTML
+  Parameters: {"authenticity_token"=>"+jicumogNI7s71PiDi793EvNruWl+bb94rCbXP71f0omRWHGTinHK56bSQrXJNExnZKrrRurcFziPbk+zOkMiA==", "garden"=>{"plant_ids"=>"21"}, "commit"=>"Add plant", "id"=>"20"}
+  [1m[36mGarden Load (0.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:58:in `set_garden'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE Garden Load (0.0ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:66:in `garden_belongs_to_current_user?'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:66:in `garden_belongs_to_current_user?'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:51:in `add_direct'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/gardens_controller.rb:51:in `add_direct'
+  [1m[36mGardenPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "garden_plants" ("garden_id", "plant_id") VALUES (?, ?)[0m  [["garden_id", 20], ["plant_id", 21]]
+  ↳ app/controllers/gardens_controller.rb:51:in `add_direct'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/gardens_controller.rb:51:in `add_direct'
+Redirected to http://localhost:3000/gardens/20
+Completed 302 Found in 18ms (ActiveRecord: 2.0ms | Allocations: 6188)
+
+
+Started GET "/gardens/20" for ::1 at 2020-02-13 10:05:40 +0000
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mGarden Load (0.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:58:in `set_garden'
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants" INNER JOIN "garden_plants" ON "plants"."id" = "garden_plants"."plant_id" WHERE "garden_plants"."garden_id" = ?[0m  [["garden_id", 20]]
+  ↳ app/views/gardens/show.html.erb:10
+  Rendered gardens/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1349)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 0.5ms | Allocations: 7821)
+
+
+Started DELETE "/gardens/20" for ::1 at 2020-02-13 10:05:43 +0000
+Processing by GardensController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UqYcld/IMWrdXcNj23XzxE4/aKVLNnnzVeqrmGe8N/+MnntfgUsMRGImlnskX9VHmjHVh9VLc59VA4gJ63beRg==", "id"=>"20"}
+  [1m[36mGarden Load (0.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:58:in `set_garden'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE Garden Load (0.0ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:66:in `garden_belongs_to_current_user?'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:66:in `garden_belongs_to_current_user?'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/gardens_controller.rb:41:in `destroy'
+  [1m[36mGarden Destroy (0.3ms)[0m  [1m[31mDELETE FROM "gardens" WHERE "gardens"."id" = ?[0m  [["id", 20]]
+  ↳ app/controllers/gardens_controller.rb:41:in `destroy'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/gardens_controller.rb:41:in `destroy'
+Redirected to http://localhost:3000/gardens
+Completed 302 Found in 15ms (ActiveRecord: 1.9ms | Allocations: 4552)
+
+
+Started GET "/gardens" for ::1 at 2020-02-13 10:05:43 +0000
+Processing by GardensController#index as HTML
+  Rendering gardens/index.html.erb within layouts/application
+  [1m[36mGarden Load (0.1ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  ↳ app/views/gardens/index.html.erb:2
+  Rendered gardens/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 867)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.2ms | Allocations: 3674)
+
+
+Started GET "/gardens/3" for ::1 at 2020-02-13 10:05:51 +0000
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mGarden Load (0.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:58:in `set_garden'
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants" INNER JOIN "garden_plants" ON "plants"."id" = "garden_plants"."plant_id" WHERE "garden_plants"."garden_id" = ?[0m  [["garden_id", 3]]
+  ↳ app/views/gardens/show.html.erb:10
+  Rendered gardens/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1134)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.4ms | Allocations: 4440)
+
+
+Started GET "/gardens/3/add_plant" for ::1 at 2020-02-13 10:05:56 +0000
+Processing by GardensController#add_plant as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mGarden Load (0.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:58:in `set_garden'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE Garden Load (0.0ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:66:in `garden_belongs_to_current_user?'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:66:in `garden_belongs_to_current_user?'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Redirected to http://localhost:3000/gardens
+Filter chain halted as :garden_belongs_to_current_user? rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 0.4ms | Allocations: 2918)
+
+
+Started GET "/gardens" for ::1 at 2020-02-13 10:05:56 +0000
+Processing by GardensController#index as HTML
+  Rendering gardens/index.html.erb within layouts/application
+  [1m[36mGarden Load (0.1ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  ↳ app/views/gardens/index.html.erb:2
+  Rendered gardens/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 866)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.2ms | Allocations: 3693)
+
+
+Started GET "/gardens/12" for ::1 at 2020-02-13 10:05:58 +0000
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mGarden Load (0.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:58:in `set_garden'
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants" INNER JOIN "garden_plants" ON "plants"."id" = "garden_plants"."plant_id" WHERE "garden_plants"."garden_id" = ?[0m  [["garden_id", 12]]
+  ↳ app/views/gardens/show.html.erb:10
+  Rendered gardens/show.html.erb within layouts/application (Duration: 13.8ms | Allocations: 1134)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.5ms | Allocations: 4444)
+
+
+Started GET "/gardens/12/add_plant" for ::1 at 2020-02-13 10:06:01 +0000
+Processing by GardensController#add_plant as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mGarden Load (0.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:58:in `set_garden'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE Garden Load (0.0ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:66:in `garden_belongs_to_current_user?'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:66:in `garden_belongs_to_current_user?'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering gardens/add_plant.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "plants"."id" FROM "plants" INNER JOIN "garden_plants" ON "plants"."id" = "garden_plants"."plant_id" WHERE "garden_plants"."garden_id" = ?[0m  [["garden_id", 12]]
+  ↳ app/views/gardens/add_plant.html.erb:3
+  [1m[36mPlant Load (0.6ms)[0m  [1m[34mSELECT "plants".* FROM "plants" ORDER BY "plants"."tfvname" ASC[0m
+  ↳ app/views/gardens/add_plant.html.erb:3
+  Rendered gardens/add_plant.html.erb within layouts/application (Duration: 6.4ms | Allocations: 5246)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 200 OK in 20ms (Views: 10.2ms | ActiveRecord: 1.1ms | Allocations: 10475)
+
+
+Started POST "/gardens/12/add_plant" for ::1 at 2020-02-13 10:06:05 +0000
+Processing by GardensController#add_direct as HTML
+  Parameters: {"authenticity_token"=>"ym7eD6mi9tcrtypNDllj1qsIOy2/dJTdC/qObcKNxOGwP5QvY34yhg9cD2XU5oTMr0JrJgFAVvjpguzSC7HZdw==", "garden"=>{"plant_ids"=>"22"}, "commit"=>"Add plant", "id"=>"12"}
+  [1m[36mGarden Load (0.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:58:in `set_garden'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE Garden Load (0.0ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:66:in `garden_belongs_to_current_user?'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:66:in `garden_belongs_to_current_user?'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:51:in `add_direct'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/gardens_controller.rb:51:in `add_direct'
+  [1m[36mGardenPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "garden_plants" ("garden_id", "plant_id") VALUES (?, ?)[0m  [["garden_id", 12], ["plant_id", 22]]
+  ↳ app/controllers/gardens_controller.rb:51:in `add_direct'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/gardens_controller.rb:51:in `add_direct'
+Redirected to http://localhost:3000/gardens/12
+Completed 302 Found in 16ms (ActiveRecord: 1.9ms | Allocations: 6164)
+
+
+Started GET "/gardens/12" for ::1 at 2020-02-13 10:06:05 +0000
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mGarden Load (0.1ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:58:in `set_garden'
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants" INNER JOIN "garden_plants" ON "plants"."id" = "garden_plants"."plant_id" WHERE "garden_plants"."garden_id" = ?[0m  [["garden_id", 12]]
+  ↳ app/views/gardens/show.html.erb:10
+  Rendered gardens/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1148)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.8ms | Allocations: 4458)
+
+
+Started GET "/gardens/12/add_plant" for ::1 at 2020-02-13 10:06:08 +0000
+Processing by GardensController#add_plant as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mGarden Load (0.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:58:in `set_garden'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE Garden Load (0.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:66:in `garden_belongs_to_current_user?'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:66:in `garden_belongs_to_current_user?'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering gardens/add_plant.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "plants"."id" FROM "plants" INNER JOIN "garden_plants" ON "plants"."id" = "garden_plants"."plant_id" WHERE "garden_plants"."garden_id" = ?[0m  [["garden_id", 12]]
+  ↳ app/views/gardens/add_plant.html.erb:3
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" ORDER BY "plants"."tfvname" ASC[0m
+  ↳ app/views/gardens/add_plant.html.erb:3
+  Rendered gardens/add_plant.html.erb within layouts/application (Duration: 5.4ms | Allocations: 5251)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 200 OK in 20ms (Views: 8.8ms | ActiveRecord: 1.2ms | Allocations: 10480)
+
+
+Started POST "/gardens/12/add_plant" for ::1 at 2020-02-13 10:06:10 +0000
+Processing by GardensController#add_direct as HTML
+  Parameters: {"authenticity_token"=>"HVh6/h8wVn775Ej1jo9sF9jKYN5ZwCOSmO+kkqs+/8dnCTDe1eySL98Pbd1UMIsN3IAw1ef04bd6l8YtYgLiUQ==", "garden"=>{"plant_ids"=>"39"}, "commit"=>"Add plant", "id"=>"12"}
+  [1m[36mGarden Load (0.3ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:58:in `set_garden'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE Garden Load (0.0ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:66:in `garden_belongs_to_current_user?'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:66:in `garden_belongs_to_current_user?'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:51:in `add_direct'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/gardens_controller.rb:51:in `add_direct'
+  [1m[36mGardenPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "garden_plants" ("garden_id", "plant_id") VALUES (?, ?)[0m  [["garden_id", 12], ["plant_id", 39]]
+  ↳ app/controllers/gardens_controller.rb:51:in `add_direct'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/gardens_controller.rb:51:in `add_direct'
+Redirected to http://localhost:3000/gardens/12
+Completed 302 Found in 16ms (ActiveRecord: 2.2ms | Allocations: 6166)
+
+
+Started GET "/gardens/12" for ::1 at 2020-02-13 10:06:10 +0000
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mGarden Load (0.1ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:58:in `set_garden'
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants" INNER JOIN "garden_plants" ON "plants"."id" = "garden_plants"."plant_id" WHERE "garden_plants"."garden_id" = ?[0m  [["garden_id", 12]]
+  ↳ app/views/gardens/show.html.erb:10
+  Rendered gardens/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1162)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.4ms | Allocations: 7632)
+
+
+Started DELETE "/gardens/12" for ::1 at 2020-02-13 10:06:13 +0000
+Processing by GardensController#destroy as HTML
+  Parameters: {"authenticity_token"=>"c9K07T/4gaidLlHHXIaKuRweZUcJ5UlVuERQxvD0Pquil7jimiK8w/rVoQa/x6xzLsofnJJNaVj9i1ppFJcDWA==", "id"=>"12"}
+  [1m[36mGarden Load (0.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:58:in `set_garden'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE Garden Load (0.0ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:66:in `garden_belongs_to_current_user?'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:66:in `garden_belongs_to_current_user?'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/gardens_controller.rb:41:in `destroy'
+  [1m[36mGarden Destroy (0.3ms)[0m  [1m[31mDELETE FROM "gardens" WHERE "gardens"."id" = ?[0m  [["id", 12]]
+  ↳ app/controllers/gardens_controller.rb:41:in `destroy'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/gardens_controller.rb:41:in `destroy'
+Redirected to http://localhost:3000/gardens
+Completed 302 Found in 13ms (ActiveRecord: 1.7ms | Allocations: 4550)
+
+
+Started GET "/gardens" for ::1 at 2020-02-13 10:06:13 +0000
+Processing by GardensController#index as HTML
+  Rendering gardens/index.html.erb within layouts/application
+  [1m[36mGarden Load (0.1ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  ↳ app/views/gardens/index.html.erb:2
+  Rendered gardens/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 830)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.3ms | Allocations: 3645)
+
+
+Started GET "/gardens/1" for ::1 at 2020-02-13 10:06:17 +0000
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGarden Load (0.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:58:in `set_garden'
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants" INNER JOIN "garden_plants" ON "plants"."id" = "garden_plants"."plant_id" WHERE "garden_plants"."garden_id" = ?[0m  [["garden_id", 1]]
+  ↳ app/views/gardens/show.html.erb:10
+  Rendered gardens/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1120)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 0.5ms | Allocations: 4428)
+
+
+Started DELETE "/gardens/1" for ::1 at 2020-02-13 10:06:19 +0000
+Processing by GardensController#destroy as HTML
+  Parameters: {"authenticity_token"=>"K1FS/z1IbEYLVJ7ckXkGYG+rXoOXnYzV3aI/ncLO6PiyYcNI6xV9GcRU74uXvmWXG3/NfzF2tahRqYKdd74dRQ==", "id"=>"1"}
+  [1m[36mGarden Load (0.1ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:58:in `set_garden'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE Garden Load (0.0ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:66:in `garden_belongs_to_current_user?'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:66:in `garden_belongs_to_current_user?'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Redirected to http://localhost:3000/gardens
+Filter chain halted as :garden_belongs_to_current_user? rendered or redirected
+Completed 302 Found in 9ms (ActiveRecord: 0.4ms | Allocations: 2965)
+
+
+Started GET "/gardens" for ::1 at 2020-02-13 10:06:19 +0000
+Processing by GardensController#index as HTML
+  Rendering gardens/index.html.erb within layouts/application
+  [1m[36mGarden Load (0.1ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  ↳ app/views/gardens/index.html.erb:2
+  Rendered gardens/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 830)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.2ms | Allocations: 3651)
+
+
+Started GET "/gardens/9" for ::1 at 2020-02-13 10:06:21 +0000
+Processing by GardensController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mGarden Load (0.2ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:58:in `set_garden'
+  Rendering gardens/show.html.erb within layouts/application
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants" INNER JOIN "garden_plants" ON "plants"."id" = "garden_plants"."plant_id" WHERE "garden_plants"."garden_id" = ?[0m  [["garden_id", 9]]
+  ↳ app/views/gardens/show.html.erb:10
+  Rendered gardens/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1134)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.4ms | Allocations: 4437)
+
+
+Started DELETE "/gardens/9" for ::1 at 2020-02-13 10:06:23 +0000
+Processing by GardensController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wl7svBwBeTxa9RNRaT8njFbf3GYcoSlf8m2Tu0zPJQABh9fhU1xK5clRysdwn6BBhgViSIR90WIz5VGF8Suifg==", "id"=>"9"}
+  [1m[36mGarden Load (0.1ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:58:in `set_garden'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE Garden Load (0.0ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens" WHERE "gardens"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:66:in `garden_belongs_to_current_user?'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/gardens_controller.rb:66:in `garden_belongs_to_current_user?'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/gardens_controller.rb:41:in `destroy'
+  [1m[36mGarden Destroy (0.5ms)[0m  [1m[31mDELETE FROM "gardens" WHERE "gardens"."id" = ?[0m  [["id", 9]]
+  ↳ app/controllers/gardens_controller.rb:41:in `destroy'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/gardens_controller.rb:41:in `destroy'
+Redirected to http://localhost:3000/gardens
+Completed 302 Found in 14ms (ActiveRecord: 1.9ms | Allocations: 4548)
+
+
+Started GET "/gardens" for ::1 at 2020-02-13 10:06:23 +0000
+Processing by GardensController#index as HTML
+  Rendering gardens/index.html.erb within layouts/application
+  [1m[36mGarden Load (0.1ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  ↳ app/views/gardens/index.html.erb:2
+  Rendered gardens/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 794)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.2ms | Allocations: 3608)
+
+
